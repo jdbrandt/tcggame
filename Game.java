@@ -164,4 +164,9 @@ public class Game
         return currentPlayer;
     }
     
+    public Player[] getPlayers()
+    {
+        return new Player[]{p1, p2};
+    }
+    
 }
