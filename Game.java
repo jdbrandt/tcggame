@@ -169,4 +169,14 @@ public class Game
         return new Player[]{p1, p2};
     }
     
+    public ArrayList<Pokemon> getAllPokemon()
+    {
+        ArrayList<Pokemon> pList = new ArrayList<Pokemon>();
+        pList.add(currentPlayer.getActive());
+        pList.add(getNonCurrentPlayer().getActive());
+        pList.addAll(currentPlayer.getBench());
+        pList.addAll(getNonCurrentPlayer().getBench());
+        return pList;
+    }
+    
 }
